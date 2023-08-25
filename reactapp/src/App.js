@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./components/UI/Button/Button";
 import Card from "./components/UI/Card/Card";
-import Banner from "./components/UI/Input/Banner";
+import Banner from "./components/UI/Banner/Banner";
 
 function App() {
 // State variables to control the start, attempt, question, card and result of the Quiz
@@ -37,9 +37,10 @@ return (
 <div style={{display:'flex' ,justifyContent:'center',alignItems:'center', flexDirection:'column'}}>
 <div >
 <h1 className="text-3xl">Quizz App</h1>
+<h1 style={{textAlign:'center'}}>learn react</h1>
 </div>
-{start && <Button onClick={ handleStart} style={"bg-orange-300 px-10 py-2 rounded hover:bg-orange-400"}>Start Quiz</Button> }
-
+{/* {start && <Button onClick={ handleStart} style={"bg-orange-
+300 px-10 py-2 rounded hover:bg-orange-400"}>Start Quiz</Button> } */}
 {banner && <Banner score={attempt} />}
 {card && <div> {questions.map((q, index) => (
 <Card key={index} question={q.question} correctAnswerMarkUpdate={correctAnswerMarkUpdate} attempt={attempt} options={opt} answer={q.answer}setQsns={setqsnAttempt} qsn={ qsnAttempt} setCard={setResult} qsnAttempt={qsnAttempt} />))}
